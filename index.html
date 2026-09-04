@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON ABYSS PORTFOLIO 2026 | Hyper Cinematic Overdrive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+    <!-- Bioluminescent Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Screen Flash Overlay -->
+    <div id="screen-flash" class="screen-flash"></div>
+
+    <!-- Entrance Portal Curtain -->
+    <div id="ocean-curtain" class="ocean-curtain">
+        <div class="curtain-content">
+            <div class="glow-portal" id="portal-target">
+                <div class="portal-core"></div>
+                <div class="portal-ring ring-1"></div>
+                <div class="portal-ring ring-2"></div>
+                <div class="portal-ring ring-3"></div>
+                <div class="portal-ring ring-4"></div>
+                <div class="portal-icon">🪸</div>
+            </div>
+            <h1 class="curtain-title">NEON ABYSS <span>PORTFOLIO</span></h1>
+            <p class="curtain-sub">INITIALIZING DIMENSIONAL OVERDRIVE V9.0 | สัมผัสพลังงานระดับซูเปอร์โนวา</p>
+            <button id="enter-btn" class="enter-btn">
+                <span class="btn-text">⚡ THUNDER BURST OVERDRIVE ⚡</span>
+                <span class="btn-energy-ring"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Multi-Layer Shockwaves -->
+    <div id="shockwave-1" class="shockwave wave-1"></div>
+    <div id="shockwave-2" class="shockwave wave-2"></div>
+    <div id="shockwave-3" class="shockwave wave-3"></div>
+
+    <!-- Interactive Bioluminescent Canvas -->
+    <canvas id="plankton-canvas"></canvas>
+
+    <!-- Dynamic Ocean Background Layer -->
+    <div class="ocean-background">
+        <div class="caustic-layer"></div>
+        <div class="sun-rays-container">
+            <div class="ray ray-1"></div>
+            <div class="ray ray-2"></div>
+            <div class="ray ray-3"></div>
+        </div>
+
+        <!-- Deep Sea Creatures -->
+        <div class="sea-creature fish-pack-1">🐠 🐟 🐡</div>
+        <div class="sea-creature shark">🦈</div>
+        <div class="sea-creature jellyfish-glow j1">🪼</div>
+        <div class="sea-creature jellyfish-glow j2">🪼</div>
+        <div class="sea-creature turtle">🐢</div>
+        <div class="sea-creature anglerfish">🦑</div>
+
+        <!-- Seabed Elements -->
+        <div class="sea-floor">
+            <div class="rock r1"></div>
+            <div class="rock r2"></div>
+            <div class="rock r3"></div>
+            <div class="seaweed sw1"></div>
+            <div class="seaweed sw2"></div>
+            <div class="seaweed sw3"></div>
+            <div class="coral c1">🪸</div>
+            <div class="coral c2">🪸</div>
+        </div>
+    </div>
+
+    <!-- Audio Control Toggle -->
+    <button id="sound-toggle" class="sound-toggle" title="เปิด/ปิด เสียงบรรยากาศ">
+        <span id="sound-icon">🔊</span>
+    </button>
+
+    <!-- Glassmorphism Navbar -->
+    <header class="navbar">
+        <div class="logo">ABYSS<span>DEPTH</span></div>
+        <nav>
+            <a href="#home" class="nav-link active">หน้าแรก</a>
+            <a href="#profile" class="nav-link">ประวัติส่วนตัว</a>
+            <a href="#education" class="nav-link">การศึกษา</a>
+            <a href="#hobby" class="nav-link">งานอดิเรก & ทักษะ</a>
+            <a href="#projects" class="nav-link">ผลงาน</a>
+            <a href="#contact" class="nav-link">ติดต่อ</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- HERO SECTION -->
+        <section id="home" class="content-section active">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="badge">🪸 Deep Sea Bioluminescence Portal</div>
+                    <h1>สวัสดีครับ! ผมชื่อ <span class="glow-text">[กรอกชื่อของคุณ]</span></h1>
+                    <p class="subtitle">นักเรียนชั้นมัธยมศึกษาปีที่ 3 | Web Developer & Creative Designer</p>
+                    <p class="description">ยินดีต้อนรับสู่อาณาจักรพอร์ตโฟลิโอใต้น้ำตระการตา ผสานดีไซน์ไฮเทคและการตอบสนองอย่างสมจริงที่สุด</p>
+                    <div class="hero-buttons">
+                        <a href="#profile" class="btn btn-primary nav-trigger">รู้จักฉันมากขึ้น</a>
+                        <a href="#contact" class="btn btn-secondary nav-trigger">ติดต่องาน</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="hologram-ring"></div>
+                    <div class="avatar-box">
+                        <img src="https://placehold.co/400x400/00332c/00f5d4?text=My+Profile" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFILE SECTION -->
+        <section id="profile" class="content-section">
+            <h2 class="page-title">ประวัติส่วนตัว <span>PROFILE</span></h2>
+            <div class="profile-layout">
+                <div class="glass-card profile-sidebar tilt-card">
+                    <img src="https://placehold.co/300x300/00332c/00f5d4?text=Avatar" alt="Avatar" class="profile-avatar">
+                    <h3>[กรอกชื่อ-นามสกุล]</h3>
+                    <span class="nickname-badge">ชื่อเล่น: [ชื่อเล่น]</span>
+                </div>
+                <div class="glass-card profile-main tilt-card">
+                    <h3>เกี่ยวกับตัวฉัน</h3>
+                    <p>ผมเป็นคนที่หลงใหลในโลกของเทคโนโลยี การเขียนโปรแกรม และการออกแบบเว็บการ์ดที่มีลูกเล่นแบบโต้ตอบได้ มีความสุขกับการสร้างสรรค์ไอเดียใหม่ๆ ให้เกิดขึ้นจริงบนหน้าจอ</p>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <span class="info-label">🎂 วันเกิด</span>
+                            <span class="info-value">[กรอกวันเกิด]</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-label">⚓ อายุ</span>
+                            <span class="info-value">[กรอกอายุ] ปี</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-label">📍 จังหวัด</span>
+                            <span class="info-value">[กรอกจังหวัด]</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-label">🏫 โรงเรียน</span>
+                            <span class="info-value">[กรอกชื่อโรงเรียน]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="content-section">
+            <h2 class="page-title">เส้นทางการศึกษา <span>EDUCATION</span></h2>
+            <div class="ocean-timeline">
+                <div class="timeline-block left">
+                    <div class="timeline-icon">🐚</div>
+                    <div class="glass-card timeline-content tilt-card">
+                        <h3>ระดับประถมศึกษา</h3>
+                        <h4>โรงเรียน: [กรอกชื่อโรงเรียนประถม]</h4>
+                        <p>สำเร็จการศึกษาด้วยผลการเรียนที่ดีเยี่ยม พร้อมเข้าร่วมกิจกรรมส่งเสริมทักษะเทคโนโลยีคอมพิวเตอร์อย่างสม่ำเสมอ</p>
+                    </div>
+                </div>
+                <div class="timeline-block right">
+                    <div class="timeline-icon">🪸</div>
+                    <div class="glass-card timeline-content tilt-card">
+                        <h3>ระดับมัธยมศึกษาตอนต้น</h3>
+                        <h4>โรงเรียน: [กรอกชื่อโรงเรียนมัธยม]</h4>
+                        <p>กำลังศึกษาชั้น ม.3/[กรอกห้อง] สายการเรียนที่เน้นวิทยาศาสตร์และเทคโนโลยีคอมพิวเตอร์</p>
+                        <div class="highlight-tag">วิชาที่สนใจ: HTML/CSS/JS, คณิตศาสตร์, วิทยาศาสตร์</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOBBY & SKILLS SECTION -->
+        <section id="hobby" class="content-section">
+            <h2 class="page-title">งานอดิเรก & ทักษะ <span>HOBBIES & SKILLS</span></h2>
+            <div class="hobby-cards-grid">
+                <div class="glass-card hobby-item tilt-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Creative Web Coding</h3>
+                    <p>ฝึกฝนการเขียน HTML, CSS, JavaScript และการสร้างเอฟเฟกต์เว็บไซต์ระดับสูง</p>
+                </div>
+                <div class="glass-card hobby-item tilt-card">
+                    <div class="card-icon">🎮</div>
+                    <h3>E-Sports & Strategy</h3>
+                    <p>การเล่นเกมแนววางแผน ช่วยฝึกกระบวนการคิดวิเคราะห์ แก้ไขปัญหา และการทำงานทีม</p>
+                </div>
+                <div class="glass-card hobby-item tilt-card">
+                    <div class="card-icon">🎧</div>
+                    <h3>Sound Design</h3>
+                    <p>ชื่นชอบการฟังเพลงแนว Synthwave, Lofi และการตัดต่อแต่งเสียงสำหรับมัลติมีเดีย</p>
+                </div>
+                <div class="glass-card hobby-item tilt-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Graphic Design</h3>
+                    <p>ออกแบบ UI/UX เบื้องต้น โปสเตอร์ และงานกราฟิกดิจิทัลหลากหลายสไตล์</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="content-section">
+            <h2 class="page-title">ผลงานที่ภาคภูมิใจ <span>PROJECTS</span></h2>
+            <div class="hobby-cards-grid">
+                <div class="glass-card project-card tilt-card">
+                    <div class="project-tag">WEB APP</div>
+                    <h3>Interactive Abyss Portfolio</h3>
+                    <p>เว็บไซต์พอร์ตโฟลิโอธีมโลกใต้น้ำเรืองแสง พร้อมระบบ Web Audio API และระบบฟิสิกส์แคนวาส</p>
+                </div>
+                <div class="glass-card project-card tilt-card">
+                    <div class="project-tag">DESIGN</div>
+                    <h3>School Cyber Poster</h3>
+                    <p>ผลงานออกแบบโปสเตอร์รณรงค์ความปลอดภัยบนโลกไซเบอร์ ได้รับรางวัลระดับโรงเรียน</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="content-section">
+            <h2 class="page-title">ช่องทางการติดต่อ <span>CONTACT</span></h2>
+            <p class="subtitle-center">ยินดีต้อนรับการติดต่อ แลกเปลี่ยนความรู้ และความร่วมมือในทุกโครงการครับ</p>
+            <div class="contact-grid">
+                <div class="glass-card contact-box tilt-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>อีเมล</h3>
+                    <p>[กรอกอีเมลของคุณ]</p>
+                    <a href="mailto:[กรอกอีเมลของคุณ]" class="btn btn-primary btn-sm">ส่งข้อความ</a>
+                </div>
+                <div class="glass-card contact-box tilt-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3>โซเชียลมีเดีย</h3>
+                    <p>Facebook / IG / GitHub</p>
+                    <a href="#" class="btn btn-secondary btn-sm">เยี่ยมชมโปรไฟล์</a>
+                </div>
+                <div class="glass-card contact-box tilt-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>สถานศึกษา</h3>
+                    <p>[กรอกชื่อโรงเรียน]</p>
+                    <p>ชั้น ม.3/[กรอกห้อง]</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 [กรอกชื่อของคุณ] | มัธยมศึกษาปีที่ 3 | โครงงานพัฒนาเว็บแอปพลิเคชันระดับไฮเทค</p>
+    </footer>
+
+    <!-- Engine Scripts -->
+    <script src="audio.js"></script>
+    <script src="canvas.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
