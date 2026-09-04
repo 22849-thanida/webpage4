@@ -104,3 +104,138 @@
 
 .coral { position: absolute; bottom: 15px; font-size: 3.2rem; filter: drop-shadow(0 0 15px var(--coral-pink)); }
 .c1 { left: 6%; } .c2 { right: 9%; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+@keyframes spinReverse { 100% { transform: rotate(-360deg); } }
+
+.ring-1 { animation: spin 1.2s linear infinite; }
+.ring-2 { animation: spinReverse 1.8s linear infinite; }
+.ring-3 { animation: spin 0.9s linear infinite; }
+.ring-4 { animation: spinReverse 3.5s linear infinite; }
+.ring-5 { animation: spin 5s linear infinite; }
+.hologram-ring { animation: spin 20s linear infinite; }
+
+.enter-btn { animation: gradientShift 3s ease infinite, btnPulse 1.5s infinite; }
+@keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes btnPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+
+/* Stage 1: Extreme Energy Charge */
+.portal-charge {
+    animation: portalChargeAnim 2.2s ease-in forwards !important;
+}
+@keyframes portalChargeAnim {
+    0% { transform: scale(1); filter: brightness(1) drop-shadow(0 0 20px var(--accent-neon-cyan)); }
+    50% { transform: scale(1.4); filter: brightness(2.5) drop-shadow(0 0 50px var(--coral-pink)); }
+    100% { transform: scale(1.8); filter: brightness(5) drop-shadow(0 0 90px #ffffff); }
+}
+
+/* Stage 2: Implosion Collapse */
+.portal-implode {
+    animation: portalImplodeAnim 1.6s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards !important;
+}
+@keyframes portalImplodeAnim {
+    0% { transform: scale(1.8) rotate(0deg); opacity: 1; }
+    40% { transform: scale(2.2) rotate(180deg); filter: brightness(8); }
+    100% { transform: scale(0.001) rotate(1080deg); opacity: 0; filter: brightness(15); }
+}
+
+/* Stage 3: Reality Crack Glass Shatter Overlay */
+.reality-crack {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: radial-gradient(circle, transparent 20%, rgba(0, 245, 212, 0.4) 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%, 15% 50%);
+    opacity: 0; pointer-events: none; z-index: 999998;
+}
+.reality-crack.crack-active { animation: crackShatter 1.5s ease-out forwards; }
+@keyframes crackShatter {
+    0% { opacity: 0; transform: scale(0.8); }
+    20% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(2); }
+}
+
+/* Earthquake Shake */
+.earthquake-shake {
+    animation: hyperShake 1.2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+@keyframes hyperShake {
+    10%, 90% { transform: translate3d(-8px, 6px, 0) rotate(-1.5deg); }
+    20%, 80% { transform: translate3d(10px, -8px, 0) rotate(2deg); }
+    30%, 50%, 70% { transform: translate3d(-14px, 10px, 0) rotate(-2.5deg); }
+    40%, 60% { transform: translate3d(14px, -10px, 0) rotate(2.5deg); }
+}
+
+/* Supernova Flash */
+@keyframes flashExplosion {
+    0% { opacity: 0; }
+    15% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* 5-Layer Shockwaves */
+.shockwave {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%; z-index: 99998; pointer-events: none; opacity: 0;
+}
+.wave-1 { width: 30px; height: 30px; background: radial-gradient(circle, rgba(0,245,212,1) 0%, rgba(0,187,249,0.8) 50%, transparent 80%); }
+.wave-2 { width: 30px; height: 30px; border: 12px solid var(--coral-pink); box-shadow: 0 0 60px var(--coral-pink); }
+.wave-3 { width: 30px; height: 30px; background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,245,212,0.9) 40%, transparent 80%); }
+.wave-4 { width: 30px; height: 30px; border: 16px dashed var(--accent-neon-cyan); }
+.wave-5 { width: 30px; height: 30px; background: radial-gradient(circle, rgba(112,0,255,0.8) 0%, transparent 70%); }
+
+.wave-1.active { animation: shockwaveExplode 1.6s cubic-bezier(0.075, 0.82, 0.165, 1) forwards; }
+.wave-2.active { animation: shockwaveExplode 1.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s forwards; }
+.wave-3.active { animation: shockwaveExplode 2.0s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards; }
+.wave-4.active { animation: shockwaveExplode 2.2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s forwards; }
+.wave-5.active { animation: shockwaveExplode 2.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s forwards; }
+
+@keyframes shockwaveExplode {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(250); opacity: 0; }
+}
+
+#plankton-canvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0; }
+
+.ocean-background {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2;
+    background: linear-gradient(180deg, var(--surface-water) 0%, var(--mid-ocean) 50%, var(--deep-abyss) 100%);
+    overflow: hidden;
+}
+
+.caustic-layer {
+    position: absolute; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(0,245,212,0.12) 10%, transparent 60%);
+    filter: blur(20px); animation: causticSway 10s ease-in-out infinite alternate;
+}
+@keyframes causticSway { 0% { transform: scale(1) translate(0,0); } 100% { transform: scale(1.2) translate(30px, -20px); } }
+
+.sun-rays-container { position: absolute; top: -20%; left: 0; width: 100%; height: 100%; pointer-events: none; }
+.ray {
+    position: absolute; top: 0; width: 120px; height: 150%;
+    background: linear-gradient(180deg, rgba(0, 245, 212, 0.25) 0%, transparent 80%);
+    transform: rotate(-25deg); animation: rayFlicker 6s ease-in-out infinite alternate;
+}
+.ray-1 { left: 20%; } .ray-2 { left: 55%; width: 180px; animation-delay: 2s; } .ray-3 { left: 80%; animation-delay: 4s; }
+@keyframes rayFlicker { 0% { opacity: 0.3; } 100% { opacity: 0.8; } }
+
+.sea-creature { position: absolute; font-size: 3rem; filter: drop-shadow(0 0 15px var(--accent-neon-cyan)); user-select: none; }
+.fish-pack-1 { top: 25%; left: -100px; animation: swimRight 22s infinite linear; }
+.shark { top: 40%; right: -150px; font-size: 4.5rem; animation: swimLeft 28s infinite linear 4s; }
+.jellyfish-glow { font-size: 3.5rem; filter: drop-shadow(0 0 20px var(--coral-pink)); }
+.j1 { top: 30%; right: 15%; animation: floatJelly 8s ease-in-out infinite; }
+.j2 { top: 60%; left: 10%; animation: floatJelly 10s ease-in-out infinite 3s; }
+.turtle { bottom: 22%; left: -120px; font-size: 4rem; animation: swimRight 36s infinite linear 2s; }
+.anglerfish { top: 70%; right: -100px; font-size: 3rem; animation: swimLeft 30s infinite linear 10s; }
+
+@keyframes swimRight { 0% { transform: translateX(0); } 100% { transform: translateX(calc(100vw + 250px)); } }
+@keyframes swimLeft { 0% { transform: translateX(0) scaleX(-1); } 100% { transform: translateX(calc(-100vw - 250px)) scaleX(-1); } }
+@keyframes floatJelly { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
+
+.sea-floor { position: absolute; bottom: 0; left: 0; width: 100%; height: 130px; background: linear-gradient(0deg, #00040a 0%, transparent 100%); z-index: 1; }
+.rock { position: absolute; bottom: -5px; background: linear-gradient(135deg, #001220, #00050d); border-radius: 50% 50% 0 0; border-top: 2px solid var(--accent-neon-cyan); box-shadow: 0 0 15px rgba(0, 245, 212, 0.3); }
+.r1 { left: 3%; width: 200px; height: 90px; } .r2 { right: 5%; width: 280px; height: 110px; } .r3 { left: 45%; width: 150px; height: 70px; }
+
+.seaweed { position: absolute; bottom: 0; width: 16px; background: linear-gradient(0deg, #002b1d, var(--emerald-glow)); border-radius: 12px 12px 0 0; transform-origin: bottom center; animation: sway 4s ease-in-out infinite alternate; }
+.sw1 { left: 8%; height: 180px; } .sw2 { left: 11%; height: 130px; animation-duration: 4.5s; } .sw3 { right: 12%; height: 200px; animation-duration: 3.8s; }
+@keyframes sway { 0% { transform: rotate(-10deg) skewX(-8deg); } 100% { transform: rotate(12deg) skewX(8deg); } }
+
+.coral { position: absolute; bottom: 15px; font-size: 3.2rem; filter: drop-shadow(0 0 15px var(--coral-pink)); }
+.c1 { left: 6%; } .c2 { right: 9%; }
